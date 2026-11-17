@@ -1,0 +1,15 @@
+<h1>Animal Shelter Intake System</h1>
+
+<p>Welcome to the Animal Shelter Intake System.</p>
+
+<h2><%= pluralize(@animals.count, "animal") %> in our care</h2>
+
+<% if @animals.any? %>
+  <div id="animals">
+    <%= render @animals %>
+  </div>
+<% else %>
+  <p>No animals are currently registered.</p>
+<% end %>
+
+<p><%= link_to "Add New Animal", new_animal_path %></p>

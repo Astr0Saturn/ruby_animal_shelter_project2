@@ -1,0 +1,22 @@
+
+<div id="<%= dom_id animal %>">
+  <h3><%= animal.name %></h3>
+
+  <p><strong>Species:</strong> <%= animal.species %></p>
+  <p><strong>Breed:</strong> <%= animal.breed %></p>
+  <p><strong>Age:</strong> <%= animal.age %></p>
+
+  <p>
+    <strong>Adoption Status:</strong>
+    <%= animal.adopted? ? "Adopted" : "Available for Adoption" %>
+  </p>
+
+  <p>
+    Added <%= time_ago_in_words(animal.created_at) %> ago
+  </p>
+
+  <p><%= link_to "View Details", animal_path(animal) %></p>
+
+  <hr>
+</div>
+
